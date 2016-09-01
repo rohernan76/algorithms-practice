@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithms practice - Problem #2 - Leap year</title>
+</head>
+<body>
+
+
+<div id="answer"></div>
+
+
+	<script>
+
+// 2. Write a function which, given a year as a number, returns whether that number is a leap year.
+
+// Definition of a leap year: (in the Gregorian calendar) a year that contains 366 days, with February 29 as an additional day: occurring in years whose last two digits are evenly divisible by four, except for centenary (occurs once in every 100 years) not divisible by 400.
+
+// 2000 -> true
+// 1900 -> false
+// 2016 -> true 
+
+var year = [2, 0, 1, 6];
+
+
+function getLeap (lyear){
+	var divide = "";
+	divide += lyear[2];
+	divide += lyear[3];
+
+	divide = parseInt(divide);
+	console.log(divide);
+
+		if (parseInt(lyear.join("")) % 400 == 0 && divide == 0) {
+			console.log("test");
+			return lyear.join("") + " is a leap year";
+		} else if(divide % 4 == 0 && divide != 0) {
+			return lyear.join("") + " is a leap year";
+		} else {
+			return lyear.join("") + " is not a leap year!";
+		}
+
+}
+
+var l = getLeap(year);
+
+ document.getElementById("answer").innerHTML = l;
+
+
+	</script>
+</body>
+</html>

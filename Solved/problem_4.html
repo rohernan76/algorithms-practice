@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithms practice - Problem #4</title>
+</head>
+<body>
+
+
+	<script>
+
+// 4. Write a function which takes an array of integers and returns an array with any duplicate integers removed.
+// [1,1,2,3,1,2,3] -> [1,2,3]
+// [1,4,4,4,2,2,4,4,4] -> [1,4,2]
+
+// var count = 0;
+// arr = [1,2,3,4,1,2,3];
+// var dup = [];
+// var sorted_arr = arr.slice().sort(); 
+// var results = [];
+
+// for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] == arr[i])
+//         ++count;
+//     dup.push(arr[i]);
+//     }
+
+// document.write(dup);
+
+// I stumbled upon this solution (below) after many frustrations. This can be found here: http://stackoverflow.com/questions/840781/easiest-way-to-find-duplicate-values-in-a-javascript-array. Before you read the code below, here was my initial approach to solving this problem:
+
+// 1. 
+var arr = [1,4,4,4,2,2,4,4,4];
+
+      var dup= [],
+      obj= {};
+
+  for (i=0;i<arr.length;i++) {
+    obj[arr[i]]=0;
+  }
+  for (i in obj) {
+    dup.push(i);
+  }
+  console.log(dup);
+
+
+	</script>
+</body>
+</html>

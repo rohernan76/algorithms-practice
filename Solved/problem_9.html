@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithms practice - Problem #9 - Merge arrays</title>
+</head>
+<body>
+
+
+<p>Click the button to join two arrays.</p>
+
+<button onclick="myFunction()">Click here to be wowed!</button>
+
+<p id="demo"></p>
+
+	<script>
+
+// 9. Write a function which takes two sorted lists and merges them into a new sorted list.
+
+// [1,2,5,6,9], [3,4,5,10] -> [1,2,3,4,5,5,6,10]
+// [], [] -> []
+// [-1, 0, 1], [-2, 2] -> [-2, -1, 0, 1, 2]
+
+// (Source: https://adriann.github.io/programming_problems.html)
+
+function myFunction() {
+    var firstArr = [1,2,5,6,9];
+    var secondArr = [3,4,5,10];
+    var newArr = firstArr.concat(secondArr);
+    document.getElementById("demo").innerHTML = newArr;
+}
+
+	</script>
+
+</body>
+</html>

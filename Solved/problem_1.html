@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithms practice - Problem #1</title>
+</head>
+<body>
+
+
+	<script>
+
+// 1. Write a function which takes an array of numbers and returns the mode of that array.
+// [2, 4, 4, 4, 6, 6, 1] - > 4
+// [0, 0, 0, 10] -> 0
+// [1] -> 1
+
+// The number which appears most often in a set of numbers. 
+
+// var arr = [1,1,1,2,4,2,2,4,4,2,2,6,6,1,1,1];
+// var count = 0;
+// var arr1 = [];
+// var current = null;
+// "use strict";
+
+// function mode(arr) {
+// 	"use strict";
+// 	var counts = [];
+// 	var i, j;
+// 	var maxcount = 1;
+// 	var maxnum = arr[0];
+	
+
+// 	//count the numbers in arr, into counts
+
+// for(var i = 0; i < arr.length; i++) {
+//     if(arr[i] != current) {
+//         if (count > 0) {
+//         	console.log(current + ' comes --> ' + count + ' times');
+//         }
+//         current = arr[i];
+//             count = 1;
+//             arr1.push(current);
+//         } else {
+//             count++;
+//         }
+//          }
+//     if (count > 0) {
+//         console.log(current + ' comes --> ' + count + ' times');
+//     }
+
+// console.log(arr1);
+// 	//find the max number in the counts array
+
+// Find the mode of an array of integers > 0 
+
+function findMode (arr) {
+
+    var counts = {};
+    var i;
+    // debugger;
+    for (var i = 0; i < arr.length; i++) {
+        var current = arr[i];
+        console.log(current);
+        if (counts[current] === undefined) {
+            counts[current] = 1;
+        } else {
+            counts[current] ++;
+        }
+    }
+    // debugger;
+    var maxcount = -Infinity;
+    var maxindex = 0;
+    // for (var i = 0; i < counts.length; i++ ) {
+    //     if (counts[i] > maxcount) {
+    //         maxcount = counts[i];
+    //         maxindex = i;
+    //      OR you could try it with "keys" of objects, which are always strings
+    for (var e in counts) {
+        if (counts[e] > maxcount) {
+            maxcount = counts[e];
+            maxindex = e;
+        }
+        }
+    return parseFloat(maxindex);
+    }
+
+
+    // look at each element of the array
+    // increment the count of whatever the element is
+    // find the maximum of those counts
+
+
+console.log(findMode([3,3,3,4,5,-6]) === 3);
+// console.log(findMode([0,1,1,2.5,2,3.5,3.5,3.5]) === 3.5);
+// console.log(findMode([0,0,1,1]) === 0) || findMode ([0,0,1,1]) === 1;
+// console.log(findMode([4]) === 4);
+	</script>
+</body>
+</html>
